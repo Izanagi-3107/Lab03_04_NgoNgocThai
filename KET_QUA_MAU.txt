@@ -1,0 +1,90 @@
+LAB03-04: NHÓM DỰ ÁN VÀ NHÂN SỰ
+
+PASS: Constructor hai tham số: lương mặc định bằng 0
+PASS: Tăng tiền cố định với byPercentage = false
+PASS: Constructor kỹ sư ngắn: lương và phụ cấp mặc định bằng 0
+PASS: Tăng lương một số tiền cố định
+PASS: Tăng lương 10 phần trăm
+PASS: Nhóm mới chưa có trưởng nhóm và chưa có thành viên
+PASS: Thêm nhân sự vào nhóm
+PASS: Thêm kỹ sư và đặt làm trưởng nhóm
+PASS: Từ chối thêm trùng nhân sự
+
+Dự án P01: Hệ thống quản lý
+Trưởng nhóm: Phạm Dũng
+[Thành viên] Nhân sự E01 | Nguyễn An | Lương: 5.000.000 | Chi phí: 5.000.000
+[Trưởng nhóm] Kỹ sư S02 | Phạm Dũng | Python | Lương: 20.000.000 | Phụ cấp: 3.000.000 | Chi phí: 23.000.000
+Tổng chi phí: 28.000.000 VNĐ/tháng
+
+PASS: Tổng chi phí bằng 28.000.000, đã tính phụ cấp kỹ sư
+PASS: Từ chối xóa trưởng nhóm hiện tại
+PASS: Đổi trưởng nhóm và tự thêm trưởng nhóm mới
+PASS: Trưởng nhóm cũ vẫn còn trong nhóm
+PASS: Xóa người từng là trưởng nhóm
+PASS: Tổng chi phí sau khi đổi và xóa bằng 20.000.000
+PASS: Hai nhóm tham chiếu tới cùng một đối tượng nhân sự
+PASS: Constructor có trưởng nhóm tự thêm đúng một thành viên
+PASS: Thêm nhân sự thứ hai vào nhóm P02
+
+Dự án P02: Ứng dụng học tập
+Trưởng nhóm: Nguyễn An
+[Trưởng nhóm] Nhân sự E01 | Nguyễn An | Lương: 5.000.000 | Chi phí: 5.000.000
+[Thành viên] Nhân sự E02 | Trần Bình | Lương: 7.700.000 | Chi phí: 7.700.000
+Tổng chi phí: 12.700.000 VNĐ/tháng
+
+[Kết thúc sử dụng] ProjectTeam P02; nhân sự vẫn độc lập.
+PASS: Kết thúc khối using: nhóm P02 đã dọn các tham chiếu nội bộ
+PASS: Nhân sự vẫn tồn tại và vẫn sử dụng được ở nhóm P01
+Nhân sự E01 | Nguyễn An | Lương: 5.000.000 | Chi phí: 5.000.000
+PASS: Nhân sự vẫn tính được chi phí sau khi kết thúc nhóm P02
+[Kết thúc sử dụng] ProjectTeam P01; nhân sự vẫn độc lập.
+[Kết thúc sử dụng] SoftwareEngineer S02
+[Kết thúc sử dụng] Employee S02
+[Kết thúc sử dụng] SoftwareEngineer S01
+[Kết thúc sử dụng] Employee S01
+[Kết thúc sử dụng] Employee E02
+[Kết thúc sử dụng] Employee E01
+
+KIỂM TRA CÁC TRƯỜNG HỢP BIÊN
+
+PASS: Constructor mặc định đúng cả ba giá trị
+PASS: Từ chối mã rỗng
+PASS: Từ chối tên rỗng
+PASS: Từ chối lương âm
+PASS: Từ chối lương NaN
+PASS: Từ chối lương vô hạn
+PASS: Từ chối ngôn ngữ rỗng
+PASS: Từ chối phụ cấp âm
+PASS: Từ chối tăng lương bằng 0
+PASS: Từ chối phần trăm âm
+PASS: Từ chối mức tăng vô hạn
+PASS: Dữ liệu không đổi sau các thao tác tăng lương sai
+PASS: Tăng 10 phần trăm của lương 0 vẫn bằng 0
+PASS: Nhóm rỗng có tổng chi phí bằng 0
+PASS: Tìm hoặc xóa mã không tồn tại trả về false
+PASS: Hai đối tượng khác nhau nhưng cùng mã vẫn bị coi là trùng
+PASS: Chọn thành viên có sẵn làm trưởng nhóm không thêm bản sao
+PASS: Từ chối đổi trưởng nhóm sang đối tượng khác có mã xung đột
+PASS: AddMember với trưởng nhóm mới giữ người cũ trong danh sách
+PASS: Thêm trùng với makeLeader = true không đổi trạng thái nhóm
+PASS: ChangeLeader chọn lại thành viên có sẵn
+PASS: Nhóm đọc dữ liệu mới của đối tượng được tham chiếu
+PASS: Danh sách chỉ đọc ngăn bên ngoài xóa thành viên trực tiếp
+PASS: Từ chối thành viên null
+PASS: Từ chối mã dự án rỗng
+PASS: Từ chối mã tìm kiếm rỗng
+[Kết thúc sử dụng] ProjectTeam T; nhân sự vẫn độc lập.
+PASS: Dispose nhóm nhiều lần an toàn và không Dispose nhân sự
+PASS: Nhóm đã kết thúc sử dụng không nhận thêm thành viên
+PASS: Phát hiện tràn số khi tăng lương
+PASS: Tràn số không làm hỏng lương đang lưu
+[Kết thúc sử dụng] Employee CLOSED
+PASS: Không phân công nhân sự đã kết thúc sử dụng
+[Kết thúc sử dụng] ProjectTeam ACTIVE; nhân sự vẫn độc lập.
+[Kết thúc sử dụng] Employee BIG
+[Kết thúc sử dụng] Employee T02
+[Kết thúc sử dụng] Employee T01
+[Kết thúc sử dụng] Employee T01
+[Kết thúc sử dụng] Employee UNKNOWN
+
+KẾT QUẢ: 52/52 kiểm tra đạt. Hoàn thành Lab03-04.
